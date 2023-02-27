@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Login</title>
+
+    <!-- Style CSS -->
+    <link href="./style.css" rel="stylesheet" />
+
+    <!-- WebIcon -->
+    <link rel="icon" type="image/x-icon" href="./webicon.png">
+  </head>
+  <body>
+    <div class="wrapper">
+      <main>
+        <div class="container">
+          <form id="form">
+            <div class="form-title">
+              <h2><span>Login</span></h2>
+            </div>
+            <div class="input-control">
+              <input
+                id="username"
+                autocomplete="off"
+                type="text"
+                placeholder="Username"
+                required />
+            </div>
+            <div class="input-control">
+              <input
+                id="password"
+                autocomplete="off"
+                type="password"
+                placeholder="Password"
+                required />
+            </div>
+            <input type="submit" value="Submit" id="submit-btn" />
+
+            <div class="error"></div>
+          </form>
+        </div>
+      </main>
+      <footer>
+        <div class="footer-title">
+          <p>copyriht ©2023</p>
+          <h2>By: Sherbolot Arbaev</h2>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Script JS -->
+    <script src="./script.js"></script>
+  </body>
+</html>
