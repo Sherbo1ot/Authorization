@@ -31,4 +31,19 @@ async function registerUser(event) {
   }
 }
 
+// Password show
+
+const showBtn = document.getElementById("show-btn");
+const password = document.getElementById("password");
+
+showBtn.addEventListener("click", () => {
+  if (password.getAttribute("type") === "password") {
+    password.setAttribute("type", "text");
+    showBtn.classList.add("active")
+  } else {
+    password.setAttribute("type", "password");
+    showBtn.classList.remove("active")
+  }
+});
+
 form.addEventListener("submit", registerUser);
