@@ -27,13 +27,11 @@ export const Registration = () => {
 				<h2>Sing Up</h2>
 			</div>
 			<form onSubmit={handleSubmit}>
-				<label>Email</label>
 				<input
 					onChange={(e) => setEmail(e.target.value)}
 					placeholder="Email address"
 				/>
 				<br />
-				<label>Password</label>
 				<input
 					onChange={(e) => setPassword(e.target.value)}
 					placeholder="Password"
