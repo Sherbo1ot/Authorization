@@ -24,11 +24,16 @@ async function registerUser(event) {
 
   // Login
 
-  if (username === "sher-admin" && password === "30092006") {
-    window.open("https://www.youtube.com/watch?v=b91XgdyX-SM");
-  } else {
-    errorText.innerText = "You don't have access!";
-  }
+  fetch("http://localhost:5088/registration", {
+    method: "POST",
+    body: JSON.stringify({
+      username,
+      password,
+    }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then((res) => res.json());
 }
 
 // Password show
@@ -39,10 +44,10 @@ const password = document.getElementById("password");
 showBtn.addEventListener("click", () => {
   if (password.getAttribute("type") === "password") {
     password.setAttribute("type", "text");
-    showBtn.classList.add("active")
+    showBtn.classList.add("active");
   } else {
     password.setAttribute("type", "password");
-    showBtn.classList.remove("active")
+    showBtn.classList.remove("active");
   }
 });
 
