@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../../provider/AuthProvider";
 
-import pic from "../assets/react.svg";
+import pic from "../../assets/react.svg";
 
 export const Login = () => {
 	const [email, setEmail] = useState("");
@@ -27,7 +27,7 @@ export const Login = () => {
 				<h2>Sing In</h2>
 			</div>
 			<form onSubmit={handleSubmit}>
-				<label htmlFor="email-address" className="sr-only">
+				<label>
 					Email
 				</label>
 				<input
@@ -41,7 +41,7 @@ export const Login = () => {
 					placeholder="Password"
 				/>
 				<br />
-				<Link to="/Registration"></Link>
+				<Link to="/Registration">sing up</Link>
 				<div>
 					<button>submit</button>
 				</div>

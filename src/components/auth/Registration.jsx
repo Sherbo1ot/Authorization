@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../../provider/AuthProvider";
+
+import pic from "../../assets/react.svg";
 
 export const Registration = () => {
 	const [email, setEmail] = useState("");
@@ -14,7 +16,7 @@ export const Registration = () => {
 			await createUser(email, password);
 			navigate("/");
 		} catch (e) {
-			alert("Неверный логин или пароль!");
+			alert("Такой аккаунт уже существует!");
 		}
 	};
 
@@ -25,9 +27,7 @@ export const Registration = () => {
 				<h2>Sing Up</h2>
 			</div>
 			<form onSubmit={handleSubmit}>
-				<label htmlFor="email-address" className="sr-only">
-					Email
-				</label>
+				<label>Email</label>
 				<input
 					onChange={(e) => setEmail(e.target.value)}
 					placeholder="Email address"
@@ -39,7 +39,7 @@ export const Registration = () => {
 					placeholder="Password"
 				/>
 				<br />
-				<Link to="/login"></Link>
+				<Link to="/login">sing in</Link>
 				<div>
 					<button>submit</button>
 				</div>
