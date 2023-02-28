@@ -27,6 +27,7 @@ This project was bootstrapped with [Vite App](https://github.com/vitejs/vite).
 
 In the project directory, you can run:
 
+### `npm install --global yarn`
 ### `yarn dev`
 
 Runs the app in the development mode.\
