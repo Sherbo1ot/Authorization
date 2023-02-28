@@ -1,3 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-0: rgb(100, 92, 255);
+  --color-1: rgb(13, 102, 255);
+  --color-2: rgb(246, 246, 246);
+  --color-3: rgb(194, 194, 194);
+
+  --background-color: rgb(13, 16, 25);
+}
+
 .form-main {
   min-height: 100vh;
   display: flex;
@@ -5,13 +19,17 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  background-color: rgb(13, 16, 25);
+  background: linear-gradient(
+    -45deg,
+    rgba(93, 0, 255, 0.514),
+    var(--background-color)
+  );
 
   input {
-    background-color: #fff;
+    background-color: var(--color-2);
     width: 260px;
     padding: 1rem 1.5rem;
-    color: rgb(0, 110, 255);
+    color: var(--color-1);
     border: none;
     margin-bottom: 1rem;
     border-radius: 0.9rem;
@@ -23,21 +41,26 @@
 
     &:focus {
       background-color: transparent;
-      color: #fff;
-      outline: 2px solid rgb(0, 110, 255);
+      color: var(--color-2);
+      outline: 2px solid var(--color-1);
     }
 
     &::placeholder {
-      color: #cecece;
+      color: var(--color-3);
     }
   }
 
   .form_title {
     font-family: "Montserrat", sans-serif;
+    padding-bottom: 2rem;
+    padding-top: 5rem;
     font-size: 2rem;
-    font-weight: 800;
-    text-shadow: 0 0 1rem rgb(0, 110, 255);
-    color: rgb(0, 110, 255);
+    font-weight: 700;
+    color: var(--color-2);
+  }
+
+  span {
+    color: var(--color-0);
   }
 
   button {
@@ -46,8 +69,8 @@
     font-size: 1rem;
     font-weight: 800;
     letter-spacing: 0.08rem;
-    background-color: rgb(0, 110, 255);
-    color: #fff;
+    background-color: var(--color-1);
+    color: var(--color-2);
     border-radius: 0.9rem;
     text-transform: uppercase;
     border: none;
@@ -57,27 +80,34 @@
     transition: 0.4s;
 
     &:hover {
-      background-color: rgb(245, 245, 245);
+      background-color: var(--color-2);
       color: #0f0f0f;
     }
   }
 
   .logout {
-    background-color: #ff2222;
-    padding: 0.8rem 3rem;
+    background-color: #ff1818;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .title-home {
+    font-size: 18px;
+    color: rgb(91, 105, 255);
   }
 
   h1 {
-    color: #8cff00;
-    font-weight: 900;
+    color: var(--color-2);
+    font-weight: 700;
   }
 
   p {
     font-size: 20px;
-    color: rgba(255, 255, 255, 0.774);
+    color: var(--color-3);
+
+    padding-bottom: 3rem;
   }
 
   .link {
-    color: #fff;
+    color: var(--color-2);
   }
 }

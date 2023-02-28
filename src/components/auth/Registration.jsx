@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../../provider/AuthProvider";
 
 import "./Auth.scss";
-import pic from "../../assets/react.svg";
+import pic from "../../assets/devx-logo.webp";
 
 export const Registration = () => {
   const [email, setEmail] = useState("");
@@ -25,7 +25,10 @@ export const Registration = () => {
     <>
       <div className="form-main">
         <div>
-          <h2 className="form_title">Sing Up</h2>
+          <img src={pic} alt="Logo" width={160} />
+          <h2 className="form_title">
+            Sign <span>Up</span>
+          </h2>
         </div>
         <form onSubmit={handleSubmit}>
           <input
@@ -46,7 +49,7 @@ export const Registration = () => {
           </div>
 
           <Link className="link" to="/login">
-            If you have an account - Sing In.
+            If you have an account - <span>Sign In.</span>
           </Link>
         </form>
       </div>

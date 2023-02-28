@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../../provider/AuthProvider";
-import "./Auth.scss";
 
-import pic from "../../assets/react.svg";
+import "./Auth.scss";
+import pic from "../../assets/devx-logo.webp";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -25,7 +25,10 @@ export const Login = () => {
     <>
       <div className="form-main">
         <div>
-          <h2 className="form_title">Sing In</h2>
+          <img src={pic} alt="Logo" width={160} />
+          <h2 className="form_title">
+            Sign <span>In</span>
+          </h2>
         </div>
         <form className="form" onSubmit={handleSubmit}>
           <input
@@ -46,7 +49,7 @@ export const Login = () => {
           </div>
 
           <Link className="link" to="/Registration">
-            If you don't have an account - Sign Up.
+            If you don't have an account - <span>Sign Up.</span>
           </Link>
         </form>
       </div>

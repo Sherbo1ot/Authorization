@@ -20,11 +20,14 @@ export const Logout = () => {
   return (
     <>
       <div className="form-main">
+        <h2 className="title-home">The site is under construction!</h2>
         <h1>Account:</h1>
         <p>Your Email: {user && user.email}</p>
 
         <div>
-          <button className="logout" onClick={handleLogout}>Logout</button>
+          <button className="logout" onClick={handleLogout}>
+            Logout
+          </button>
         </div>
       </div>
     </>
