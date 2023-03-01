@@ -11,9 +11,9 @@ export const Logout = () => {
     try {
       await logout();
       navigate("/");
-      console.log("You are logged out");
+      alert("You are logged out");
     } catch (e) {
-      console.log(e.message);
+      alert(e.message);
     }
   };
 
@@ -21,7 +21,7 @@ export const Logout = () => {
     <>
       <div className="form-main">
         <h2 className="title-home">The site is under construction!</h2>
-        <h1>Account:</h1>
+        <h1>Welcome to <br /> DevX - Karakol website!</h1>
         <p>Your Email: {user && user.email}</p>
 
         <div>

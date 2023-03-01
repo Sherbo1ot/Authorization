@@ -87,17 +87,23 @@
 
   .logout {
     background-color: #ff1818;
+
     padding: 0.8rem 1.2rem;
   }
 
   .title-home {
     font-size: 18px;
     color: rgb(91, 105, 255);
+
+    padding-bottom: 1rem;
   }
 
   h1 {
     color: var(--color-2);
-    font-weight: 700;
+    font-weight: 800;
+    line-height: 1.2;
+
+    padding-bottom: 1rem;
   }
 
   p {

@@ -45,7 +45,7 @@ export const Registration = () => {
           <br />
 
           <div>
-            <button>submit</button>
+            <button>Sign Up</button>
           </div>
 
           <Link className="link" to="/login">
