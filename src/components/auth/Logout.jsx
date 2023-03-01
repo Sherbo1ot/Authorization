@@ -22,7 +22,7 @@ export const Logout = () => {
       <div className="form-main">
         <h2 className="title-home">
           The site is under construction! <br />
-          by: Sherbolot Arbaev
+          by: Sherbolot Arbaev, Elkhan Sharshenbekov, Janneta Kottoeva
         </h2>
         <h1>
           Welcome to <br /> DevX - Karakol website!
