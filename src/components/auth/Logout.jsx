@@ -20,14 +20,22 @@ export const Logout = () => {
   return (
     <>
       <div className="form-main">
-        <h2 className="title-home">The site is under construction!</h2>
-        <h1>Welcome to <br /> DevX - Karakol website!</h1>
+        <h2 className="title-home">
+          The site is under construction! <br />
+          by: Sherbolot Arbaev
+        </h2>
+        <h1>
+          Welcome to <br /> DevX - Karakol website!
+        </h1>
         <p>Your Email: {user && user.email}</p>
 
-        <div>
+        <div className="buttons">
           <button className="logout" onClick={handleLogout}>
             Logout
           </button>
+          <a href="https://devx911.netlify.app/">
+            <button className="online_btn">Journal</button>
+          </a>
         </div>
       </div>
     </>
