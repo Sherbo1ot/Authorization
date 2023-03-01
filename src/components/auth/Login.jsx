@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../../provider/AuthProvider";
 
 import "./Auth.scss";
-import pic from "../../assets/devx-logo.webp";
+import pic from "../../assets/DEVX_KARAKOL.webp";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -25,7 +25,7 @@ export const Login = () => {
     <>
       <div className="form-main">
         <div>
-          <img src={pic} alt="Logo" width={160} />
+          <img src={pic} alt="Logo" width={200} />
           <h2 className="form_title">
             Sign <span>In</span>
           </h2>
