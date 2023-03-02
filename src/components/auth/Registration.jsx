@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../../provider/AuthProvider";
 
 import "./Auth.scss";
-import pic from "../../assets/DEVX_KARAKOL.webp";
+import pic from "../../assets/prog-lang.gif";
 
 export const Registration = () => {
   const [email, setEmail] = useState("");
@@ -25,7 +25,7 @@ export const Registration = () => {
     <>
       <div className="form-main">
         <div>
-          <img src={pic} alt="Logo" width={200} />
+          <img className="logo" src={pic} alt="Logo" />
           <h2 className="form_title">
             Sign <span>Up</span>
           </h2>
