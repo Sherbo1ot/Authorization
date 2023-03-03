@@ -11,28 +11,8 @@ export const Login = () => {
   const { signIn } = UserAuth();
   const navigate = useNavigate();
 
-  const validation = () => {
-    const emailInputValue = document.getElementById("email").value;
-    const passwordInputValue = document.getElementById("password").value;
-
-    const passwordInput = document.getElementById("password");
-
-    const erorrText = document.getElementById("errText");
-    const linkText = document.querySelector(".link");
-
-    if (passwordInputValue.length < 4 || passwordInputValue.length > 15) {
-      erorrText.innerText = `Password must contain at
-        least 4 and
-        no more than 10 characters`;
-      linkText.innerText = "";
-    } else {
-      linkText.innerText = ``;
-    }
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    validation();
     try {
       await signIn(email, password);
       navigate("/");
