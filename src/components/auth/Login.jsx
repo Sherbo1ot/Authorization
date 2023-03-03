@@ -12,15 +12,21 @@ export const Login = () => {
   const navigate = useNavigate();
 
   const validation = () => {
-    const emailInput = document.getElementById("email").value;
-    const passwordInput = document.getElementById("password").value;
+    const emailInputValue = document.getElementById("email").value;
+    const passwordInputValue = document.getElementById("password").value;
 
+    const passwordInput = document.getElementById("password");
+
+    const erorrText = document.getElementById("errText");
     const linkText = document.querySelector(".link");
 
-    if (passwordInput.length < 4 || passwordInput.length > 15) {
-      linkText.innerText = `Password must contain at
+    if (passwordInputValue.length < 4 || passwordInputValue.length > 15) {
+      erorrText.innerText = `Password must contain at
         least 4 and
         no more than 10 characters`;
+      linkText.innerText = "";
+    } else {
+      linkText.innerText = ``;
     }
   };
 
@@ -63,6 +69,8 @@ export const Login = () => {
           <div>
             <button>Sign In</button>
           </div>
+
+          <div id="errText"></div>
 
           <Link className="link" to="/Registration">
             If you don't have an account - <span>Sign Up.</span>
