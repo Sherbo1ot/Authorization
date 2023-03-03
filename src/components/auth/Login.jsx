@@ -11,8 +11,22 @@ export const Login = () => {
   const { signIn } = UserAuth();
   const navigate = useNavigate();
 
+  const validation = () => {
+    const emailInput = document.getElementById("email").value;
+    const passwordInput = document.getElementById("password").value;
+
+    const linkText = document.querySelector(".link");
+
+    if (passwordInput.length < 4 || passwordInput.length > 15) {
+      linkText.innerText = `Password must contain at
+        least 4 and
+        no more than 10 characters`;
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    validation();
     try {
       await signIn(email, password);
       navigate("/");
@@ -32,12 +46,14 @@ export const Login = () => {
         </div>
         <form className="form" onSubmit={handleSubmit}>
           <input
+            id="email"
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
             required
           />
           <br />
           <input
+            id="password"
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
             required
